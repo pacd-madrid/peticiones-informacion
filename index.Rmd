@@ -1,0 +1,15 @@
+---
+title: Peticiones de información de los grupos auditores del Ayuntamiento de Madrid
+output:
+  html_document:
+    toc: false
+    toc_float: false
+    includes:
+      before_body: doc_prefix_index.html
+---
+
+
+- [Petición 11/06/2016 13:03:41](peticion-11-06-2016-13-03-41.html)
+
+- [Petición 11/06/2016 13:27:32](peticion-11-06-2016-13-27-32.html)
+

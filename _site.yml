@@ -1,0 +1,19 @@
+name: "peticiones-informacion"
+output_dir: "."
+navbar:
+  title: "Peticiones de información de los grupos auditores de los distritos al Ayuntamiento de Madrid"
+  left:
+    - text: "Índice"
+      href: index.html
+
+output:
+  html_document:
+    theme: united
+    css: style.css
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    mathjax: null
+    self_contained: false
+    includes:
+        before_body: doc_prefix.html
