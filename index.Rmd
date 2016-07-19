@@ -9,7 +9,50 @@ output:
 ---
 
 
-- [Petición 11/06/2016 13:03:41](peticion-11-06-2016-13-03-41.html)
+```{r, echo=FALSE, , cache=FALSE, message=FALSE, warning=FALSE}
+# URL de la hoja de cálculo con los datos
+library(knitr)
 
-- [Petición 11/06/2016 13:27:32](peticion-11-06-2016-13-27-32.html)
+## Global options
+options(digits = 4, scipen=10)
+opts_chunk$set(echo=FALSE, cache=TRUE, prompt=FALSE, tidy=TRUE, comment=NA, message=FALSE, warning=FALSE)
+```
+
+```{r}
+library(RCurl)
+# URL de la hoja de cálculo con los datos
+url.data <- "https://docs.google.com/spreadsheets/d/1L_kLylhVReaL7GiL1Q0PJjx_b6yWOf2EPuk4bxiOIEU/pub?gid=1250269168&single=true&output=csv"
+# Carga de los datos
+data <- read.csv(text = getURL(url.data, .encoding = "UTF-8"), encoding = "UTF-8", header = T, stringsAsFactors = F)
+data$Distrito <- as.factor(data$Distrito)
+# Escala de satisfación
+data$Valoración.de.la.respuesta <- ifelse(is.na(data$Valoración.de.la.respuesta), 0, data$Valoración.de.la.respuesta) 
+satisfaccion <- c("Pendiente de valorar", "Nada satifactoria", "Poco satifactoria", "Moderadamente satisfactoria", "Bastante satisfactoria", "Completamente satisfactoria")
+data$Valoración.de.la.respuesta <- satisfaccion[data$Valoración.de.la.respuesta+1]
+data$Valoración.de.la.respuesta <- as.factor(data$Valoración.de.la.respuesta)
+```
+
+### Número total de peticiones: `r nrow(data)`
+
+```{r, results="asis"}
+# Escribir la lista de peticiones
+for (distrito in levels(data$Distrito)){
+  cat(paste("\n##", distrito, "\n"))
+  for (x in data[,1][data$Distrito==distrito])
+    cat(paste("- [Petición ", x, "](peticion-", gsub(":", "-", gsub("/", "-", gsub(" ", "-", tolower(iconv(x, to='ASCII//TRANSLIT'))))), ".html)\n", sep=""))
+}
+
+```
+
+## Valoración de las respuestas
+
+```{r valoracion_respuestas}
+# Diagrama de sectores de la valoración de las respuestas
+table <- table(data$Valoración.de.la.respuesta)
+labels <- paste(names(table), "\n", table/nrow(data)*100, "%", sep="")
+colfunc <- colorRampPalette(c("red","green"))
+pie(table, labels = labels, main="Valoración de las respuestas", col= c("yellow", colfunc(5)))
+```
+
+
 

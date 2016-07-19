@@ -5,13 +5,15 @@ url.data <- "https://docs.google.com/spreadsheets/d/1L_kLylhVReaL7GiL1Q0PJjx_b6y
 library(RCurl)
 library(rmarkdown)
 library(yaml)
-# Librería para la realización de mapas con google maps.
-#library(plotGoogleMaps)
 
 # Carga de los datos
 data <- read.csv(text = getURL(url.data, .encoding = "UTF-8"), encoding = "UTF-8", header = T, stringsAsFactors = F)
 headers <- gsub(".", " ", names(data), fixed=T)
 
+# Escala de satisfación
+data$Valoración.de.la.respuesta <- ifelse(is.na(data$Valoración.de.la.respuesta), 0, data$Valoración.de.la.respuesta) 
+satisfaccion <- c("Pendiente de valorar", "Nada satifactoria", "Poco satifactoria", "Moderadamente satisfactoria", "Bastante satisfactoria", "Completamente satisfactoria")
+data$Valoración.de.la.respuesta <- satisfaccion[data$Valoración.de.la.respuesta+1]
 
 # Número de columnas a procesar (las dos últimas no se procesan al tener datos confidenciales)
 n <- ncol(data)
@@ -49,33 +51,7 @@ render.record <- function(x, y){
   render_site(file.name)
 }
 
-
-#' Función que genera todas las fichas en formato Rmarkdown.
-#'
-#' @param data Data frame con los registros de las fichas.
-#'
-#' @return None
-#' @export
-#'
-#' @examples
-render.all.records <- function(data){
-  # Generar el índice
-  file.create("index.Rmd")
-  yamlheader <- "---
-title: Peticiones de información de los grupos auditores del Ayuntamiento de Madrid
-output:
-  html_document:
-    toc: false
-    toc_float: false
-    includes:
-      before_body: doc_prefix_index.html
----\n\n"
-  write(yamlheader, file="index.Rmd", append=T)
-  write(unlist(lapply(data[,1], function(x) paste("- [Petición ", x, "](peticion-", gsub(":", "-", gsub("/", "-", gsub(" ", "-", x))), ".html)\n", sep=""))), file="index.Rmd", append=T)
-  # Generar las peticiones
-  lapply(1:nrow(data), function(i) render.record(headers, data[i,]))
-}
-
-render.all.records(data)
+# Generar las peticiones
+lapply(1:nrow(data), function(i) render.record(headers, data[i,]))
 
 render_site()
