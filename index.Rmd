@@ -48,8 +48,8 @@ for (distrito in levels(data$Distrito)){
 ## Tiempo medio de respuesta
 ```{r}
 time <- as.Date(data$Fecha.respuesta,"%d/%m/%Y")-as.Date(data$Fecha.envío,"%d/%m/%Y")
-cat(mean(as.numeric(time),na.rm=T)," días")
 ```
+`r mean(as.numeric(time),na.rm=T)` días.
 
 
 ## Valoración de las respuestas

@@ -8,12 +8,21 @@ library(yaml)
 
 # Carga de los datos
 data <- read.csv(text = getURL(url.data, .encoding = "UTF-8"), encoding = "UTF-8", header = T, stringsAsFactors = F)
+
+# Reordenar las columnas y eliminar el correo y el colectivo 
+data <- data[c(1:4,11,5:8,12)]
+
+# Obtener normbres de variables para las cabeceras de sección
 headers <- gsub(".", " ", names(data), fixed=T)
 
 # Escala de satisfación
 data$Valoración.de.la.respuesta <- ifelse(is.na(data$Valoración.de.la.respuesta), 0, data$Valoración.de.la.respuesta) 
 satisfaccion <- c("Pendiente de valorar", "Nada satifactoria", "Poco satifactoria", "Moderadamente satisfactoria", "Bastante satisfactoria", "Completamente satisfactoria")
 data$Valoración.de.la.respuesta <- satisfaccion[data$Valoración.de.la.respuesta+1]
+
+# Completar la fecha de respuesta cuando aún no hay respuesta
+data$Fecha.respuesta <- ifelse(data$Fecha.respuesta=="", "Aún sin respuesta", data$Fecha.respuesta) 
+
 
 # Número de columnas a procesar (las dos últimas no se procesan al tener datos confidenciales)
 n <- ncol(data)
