@@ -1,4 +1,6 @@
 base
-knitr
-bitops
-RCurl
+airtabler
+dplyr
+DT
+ggplot2
+plotly
