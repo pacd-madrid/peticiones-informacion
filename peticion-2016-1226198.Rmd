@@ -8,6 +8,11 @@ de Usera
 Descripción
 ===========
 
+Importe del coste/hora facturado por las empresas Virensis SA, para el
+curso 2014-2015 y Aula Intercultural SL, para el curso 2015-2016
+adjudicatarias de los "Talleres de Formación impartidos en los Centros
+Culturales del distrito de Usera".
+
 Caso de ilegitimidad
 ====================
 
@@ -34,14 +39,8 @@ Respuesta
 Tiempo respuesta
 ================
 
-NA
-
 Valoración respuesta
 ====================
 
-NA
-
 Copia de la respuesta
 =====================
-
-<https://dl.airtable.com/rewwiXyGRv2MCjs2gDlt_Solicitud_Importe%20coste-hora%20facturado%20por%20Virensis%20SA%20y%20Aula%20Intercultural%20SL_2016-12-22.pdf>

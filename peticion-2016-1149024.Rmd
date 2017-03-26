@@ -7,6 +7,11 @@ culturales de Usera
 Descripción
 ===========
 
+Solicitud de información sobre el número de personas asistentes a cada
+uno de los cursos organizados en los "Talleres de Formación impartidos
+en los Centros Culturales del distrito de Usera" desglosado por número
+de mujeres y hombres.
+
 Caso de ilegitimidad
 ====================
 
@@ -33,14 +38,8 @@ Respuesta
 Tiempo respuesta
 ================
 
-NA
-
 Valoración respuesta
 ====================
 
-NA
-
 Copia de la respuesta
 =====================
-
-<https://dl.airtable.com/H3xunceuT2ycLr5OwIF6_Solicitud_Personas%20asistentes%20a%20los%20cursos_2016-11-29.pdf>

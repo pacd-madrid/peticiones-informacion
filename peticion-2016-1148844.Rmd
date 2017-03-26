@@ -7,6 +7,11 @@ Facturación total de la empresa Aula Intercultural SL en el curso
 Descripción
 ===========
 
+Solicitud de la facturación total realizada al Ayuntamiento de Madrid
+por la empresa Aula Intercultural SL correspondiente al curso 2015-2016,
+en concepto de los "Talleres de Formación impartidos en los Centros
+Culturales del distrito de Usera".
+
 Caso de ilegitimidad
 ====================
 
@@ -33,14 +38,8 @@ Respuesta
 Tiempo respuesta
 ================
 
-NA
-
 Valoración respuesta
 ====================
 
-NA
-
 Copia de la respuesta
 =====================
-
-<https://dl.airtable.com/PFQZJgTRnO3W3ZWkXJcz_Solicitud_Facturaci%C3%B3n%20de%20Aula%20Intercultural%20SL_Talleres%20de%20Formaci%C3%B3n%20Usera_2016-11-29.pdf>

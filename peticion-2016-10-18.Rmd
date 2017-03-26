@@ -6,6 +6,8 @@ Contratos de mantenimiento integral y limpieza LOTE2 en Arganzuela
 Descripción
 ===========
 
+Contratos de mantenimiento integral y limpieza LOTE2 en Arganzuela.
+
 Caso de ilegitimidad
 ====================
 
@@ -30,12 +32,8 @@ Respuesta
 Tiempo respuesta
 ================
 
-NA
-
 Valoración respuesta
 ====================
-
-NA
 
 Copia de la respuesta
 =====================

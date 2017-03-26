@@ -42,7 +42,7 @@ Se recibe el contrato pero con algunos datos borrados.
 Tiempo respuesta
 ================
 
-93 días.
+93 días
 
 Valoración respuesta
 ====================

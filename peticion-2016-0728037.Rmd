@@ -7,6 +7,9 @@ Frutas y Verduras de Legazpi
 Descripción
 ===========
 
+Contratos de seguridad, obras y gasto de energía para el Mercado de
+Frutas y Verduras de Legazpi.
+
 Caso de ilegitimidad
 ====================
 
@@ -31,12 +34,13 @@ Respuesta
 Tiempo respuesta
 ================
 
-84
+84 días
 
 Valoración respuesta
 ====================
 
-NA
-
 Copia de la respuesta
 =====================
+
+-   [2016-10-10-arganzuela-contratos-mantenimeinto-mercado-frutas-verduras
+    (1).pdf](https://dl.airtable.com/66qEadQKO4tWxhv2iRLQ_2016-10-10-arganzuela-contratos-mantenimeinto-mercado-frutas-verduras%20(1).pdf)

@@ -6,6 +6,13 @@ Monitores y asistencia de los cursos de los centros culturales de Usera
 Descripción
 ===========
 
+1.  Solicitud de documentación sobre los monitores que imparten los
+    talleres de formación en los Centros Culturales del distrito
+    de Usera.
+2.  Información sobre la asistencia y los cursos que se imparten en los
+    Centros Culturales.
+3.  Memoria de la Junta Municipal del distrito de Usera 2015-2016.
+
 Caso de ilegitimidad
 ====================
 
@@ -29,10 +36,17 @@ Copia de la petición
 Respuesta
 =========
 
+1.  La respuesta ha sido voluntariosamente positiva pero al no contar
+    con un borrador previo, la información ha sido escasa, imprecisa y
+    errónea en algunos puntos.
+2.  En relación con la información que nos falta por obtener (Memoria de
+    los cursos 2015-2016) y datos económicos, no se nos precisa cuando
+    nos será facilitada.
+
 Tiempo respuesta
 ================
 
-50
+50 días
 
 Valoración respuesta
 ====================
@@ -42,4 +56,5 @@ Valoración respuesta
 Copia de la respuesta
 =====================
 
-<https://dl.airtable.com/zXw2JmWUQY38eHtJdb7Q_Solicitud%20informacion%20centros%20culturales.pdf>
+-   [Respuesta datos talleres centros culturales usera curso
+    2015-2016.pdf](https://dl.airtable.com/OqS4zxJWT8iKbNfqRt2F_Respuesta%20datos%20talleres%20centros%20culturales%20usera%20curso%202015-2016.pdf)

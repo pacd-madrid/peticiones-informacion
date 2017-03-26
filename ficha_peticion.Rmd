@@ -35,13 +35,13 @@ opts_knit$set(width=75)
 `r peticion[["Copia peticion"]][[1]]$url`
 
 # Respuesta
-`r peticion$Comentarios`
+`r if (is.na(peticion$Comentarios)) "" else peticion$Comentarios`
 
 # Tiempo respuesta
-`r peticion[["Tiempo respuesta"]]` días.
+`r if (is.na(peticion[["Tiempo respuesta"]])) "" else paste(peticion[["Tiempo respuesta"]],"días")`
 
 # Valoración respuesta
-`r peticion[["Valoración respuesta"]]`
+`r if (is.na(peticion[["Valoración respuesta"]])) "" else peticion[["Valoración respuesta"]]`
 
 # Copia de la respuesta
 ```{r, results="asis"}

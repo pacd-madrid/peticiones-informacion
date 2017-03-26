@@ -7,6 +7,9 @@ Hierro, 27
 Descripción
 ===========
 
+Contrato de alquiler de local Oficina de Atencion al Contribuyente c/
+Hierro, 27.
+
 Caso de ilegitimidad
 ====================
 
@@ -28,15 +31,22 @@ Copia de la petición
 Respuesta
 =========
 
+La respuesta no es completamente satisfactoria porque se pedía el
+contrato y aunque informan sobre los datos más relevantes de este no
+aportan copia del contrato.
+
 Tiempo respuesta
 ================
 
-59
+59 días
 
 Valoración respuesta
 ====================
 
-4 Bastante satisfactoria
+3 Moderadamente satisfactoria
 
 Copia de la respuesta
 =====================
+
+-   [2016-09-15-arganzuela-contrato-local-calle-hierro
+    (1).pdf](https://dl.airtable.com/2FLHbhvxRomQDqjpQcpb_2016-09-15-arganzuela-contrato-local-calle-hierro%20(1).pdf)

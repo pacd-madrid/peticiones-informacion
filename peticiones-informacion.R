@@ -38,8 +38,8 @@ datos <- left_join(datos, respuestas, by="Registro")
 datos[["Tiempo respuesta"]] <- as.numeric(as.Date(datos[["Fecha respuesta"]])-as.Date(datos[["Fecha envío"]]))
 
 # GENERACIÓN DE PETICIONES
-for (i in 16:nrow(datos)){
-  peticion = datos[4,]
+for (i in 1:nrow(datos)){
+  peticion = datos[i,]
   render('ficha_peticion.Rmd',
          output_format = "md_document", 
          output_file =  paste0("peticion-", gsub("/", "-", peticion$Registro), ".Rmd"),
