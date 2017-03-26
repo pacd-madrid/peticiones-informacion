@@ -1,7 +1,6 @@
 # Script para publicar el registro de peticiones de información de los grupos auditores de los distritos al Ayuntamiento de Madrid 
 library(RCurl)
 library(rmarkdown)
-library(yaml)
 library(airtabler)
 library(dplyr)
 
@@ -38,30 +37,17 @@ datos <- left_join(datos, respuestas, by="Registro")
 # Calcular tiempo de respuesta
 datos[["Tiempo respuesta"]] <- as.numeric(as.Date(datos[["Fecha respuesta"]])-as.Date(datos[["Fecha envío"]]))
 
-# Reordenar las columnas y eliminar el correo y el colectivo 
-#data <- data[c(1:4,11,5:8,12,13)]
-
-# Obtener normbres de variables para las cabeceras de sección
-#headers <- gsub(".", " ", names(data), fixed=T)
-
-# Escala de satisfación
-#data$Valoración.de.la.respuesta <- ifelse(is.na(data$Valoración.de.la.respuesta), 0, data$Valoración.de.la.respuesta) 
-#satisfaccion <- c("Pendiente de valorar", "Nada satifactoria", "Poco satifactoria", "Moderadamente satisfactoria", "Bastante satisfactoria", "Completamente satisfactoria")
-#data$Valoración.de.la.respuesta <- satisfaccion[data$Valoración.de.la.respuesta+1]
-
-# Completar la fecha de respuesta cuando aún no hay respuesta
-#data$Fecha.respuesta <- ifelse(data$Fecha.respuesta=="", "Aún sin respuesta", data$Fecha.respuesta) 
-
-# GENERACIÓN DE FICHAS
-for (i in 1:nrow(datos)){
-  peticion = datos[i,]
+# GENERACIÓN DE PETICIONES
+for (i in 16:nrow(datos)){
+  peticion = datos[4,]
   render('ficha_peticion.Rmd',
          output_format = "md_document", 
-         output_file =  paste("peticion-", gsub("/","-",peticion$Registro) , ".Rmd", sep=''),
+         output_file =  paste0("peticion-", gsub("/", "-", peticion$Registro), ".Rmd"),
          output_dir = '.',
          quiet = TRUE)
 }
 
 render_site()
-# clean_site()
+#clean_site()
+
 

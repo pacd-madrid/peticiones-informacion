@@ -1,6 +1,5 @@
 ---
-title: "r peticion$Título"
-date: "`r Sys.Date()`"
+title:
 #output:
 #  rmdformats::material:
 #    highlight: kate
@@ -13,13 +12,7 @@ library(rmdformats)
 
 ## Global options
 options(max.print="75")
-opts_chunk$set(echo=FALSE,
-	             cache=TRUE,
-               prompt=FALSE,
-               tidy=TRUE,
-               comment=NA,
-               message=FALSE,
-               warning=FALSE)
+opts_chunk$set(echo=F, cache=T, prompt=F, tidy=T, comment=NA, message=F, warning=F)
 opts_knit$set(width=75)
 ```
 
@@ -27,7 +20,7 @@ opts_knit$set(width=75)
 `r peticion$Título` 
 
 # Descripción 
-`r peticion$Descipción` 
+`r peticion$Descripción` 
 
 # Caso de ilegitimidad
 `r peticion$Caso`
@@ -42,14 +35,21 @@ opts_knit$set(width=75)
 `r peticion[["Copia peticion"]][[1]]$url`
 
 # Respuesta
-`r peticion$Respuesta`
+`r peticion$Comentarios`
 
 # Tiempo respuesta
-`r peticion[["Tiempo respuesta"]]`
+`r peticion[["Tiempo respuesta"]]` días.
 
 # Valoración respuesta
 `r peticion[["Valoración respuesta"]]`
 
-
 # Copia de la respuesta
-`r peticion[["Copia peticion"]][[1]]$url`
+```{r, results="asis"}
+docs <- peticion[["Copia respuesta"]][[1]]
+if (length(docs)>0){
+  for (i in 1:nrow(docs)){
+    cat("- [", docs[i,"filename"], "](", docs[i,"url"], ")\n")
+  }
+}
+```
+

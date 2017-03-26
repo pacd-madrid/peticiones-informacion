@@ -9,7 +9,7 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
+```{r setup, include=F}
 ## Global options
 options(digits = 4, scipen=10)
 knitr::opts_chunk$set(echo=F, cache=F, prompt=F, tidy=T, comment=NA, message=F, warning=F)
@@ -52,8 +52,8 @@ datos.peticiones$`Valoración respuesta`[is.na(datos.peticiones$`Valoración res
 
 ```{r}
 library(DT)
-crear.url <- function(registro, titulo) {
-  return(paste('<a href="peticion-', gsub("/", "-", registro) , '.html">',  titulo, '</a>', sep=""))
+crear.url <- function(enlace, texto) {
+  return(paste0('<a href="peticion-', gsub("/", "-", enlace) , '.html">',  texto, '</a>'))
 }
 
 peticiones <- rename(datos.peticiones, temp=Título) %>% 
